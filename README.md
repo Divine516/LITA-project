@@ -155,3 +155,27 @@ In addition to the total sales for each product category, further analysis was m
 
 
 ![sql 2](https://github.com/user-attachments/assets/5c51594b-6d73-4f10-8346-e5989bd39ed8)
+
+
+
+
+4. Calculate total revenue per product: ``SQL select product, sum (Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2], Group by product```. The total revenue for each product is as follows:
+
+- Shoe = 3,087,500
+- Jacket =	1,050,000
+- Hat =	1,587,500
+- Socks	= 912,500
+- Shirt =	2,450,000
+- Gloves =	1,500,000
+
+
+5. Calculate monthly sales totals for the current year:```SQL select orderdate, sum (Total_sales) as Totalsales from [dbo].[Sales Data-2-1-2], where orderdate >= '2024-01-01', group by orderdate```. The monthly sales total is as follows:
+
+- 2024-07-31 =	187,500
+- 2024-04-30 =	200,000
+- 2024-06-30	= 750,000
+- 2024-03-31 =	275,000
+- 2024-02-29	= 1,500,000
+- 2024-01-31	= 1,000,000
+- 2024-05-31 =	225,000
+- 2024-08-31	= 875,000 
