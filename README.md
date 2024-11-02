@@ -115,7 +115,8 @@ Import the excel table to be used for the data squery to the SQL studio.
 
 Thereafter ``` SQL SELECT * FROM SALES DATA 2-1-2``` and begin to write queries to analyze your data set. The first query to be written is to 
 
-1. Retrieve the total sales for each product category : ```SQL select product, sum(Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2], Group by PRODUCT```. The total sales retrieved is as follows :
+1. Retrieve the total sales for each product category : ```SQL select product, sum(Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2]
+Group by PRODUCT```. The total sales retrieved is as follows :
 
 - Shoes =	3,087,500
 - Jacket =	1,050,000
@@ -124,7 +125,8 @@ Thereafter ``` SQL SELECT * FROM SALES DATA 2-1-2``` and begin to write queries 
 - Shirt	= 245,0000
 - Gloves =	1,500,000
 
-In addition to the total sales for each product category, further analysis was made on total quantity that was sold for each product: ```SQL select product, sum (Quantity) as Quantity_Revenue from [dbo].[Sales Data-2-1-2], Group by product```. The total quantity per product is as follows:
+In addition to the total sales for each product category, further analysis was made on total quantity that was sold for each product: ```SQL select product, sum (Quantity) as Quantity_Revenue from [dbo].[Sales Data-2-1-2]
+Group by product```. The total quantity per product is as follows:
 
 - Shoes = 72,500
 - Jacket = 27,500
@@ -137,14 +139,17 @@ In addition to the total sales for each product category, further analysis was m
 ![sql 1](https://github.com/user-attachments/assets/b7c374a3-0d47-4c0b-bf8f-be6c09e222b2)
 
 
-2. Find the number of sales transactions in each region: ```SQL select Region, count (CustomerID) as sales_by_region from [dbo].[Sales Data-2-1-2], Group by Region```. The total number of sales transaction are as follows:
+2. Find the number of sales transactions in each region: ```SQL select Region, count (CustomerID) as sales_by_region from [dbo].[Sales Data-2-1-2]
+Group by Region```. The total number of sales transaction are as follows:
 
  - North =	12,500
  - East	= 12,500
  - South = 12,500
  - West =	12,500
 
-3. Find the highest-selling product by total sales value: ```SQL select product, sum (Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2], Group by product, order by product_total_sales desc``` . The highest selling product in descending order is as follows:
+3. Find the highest-selling product by total sales value: ```SQL select product, sum (Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2]
+Group by product
+order by product_total_sales desc``` . The highest selling product in descending order is as follows:
 
 - Shoes =	3,087,500
 - Shirt =	2,450,000
@@ -159,7 +164,8 @@ In addition to the total sales for each product category, further analysis was m
 
 
 
-4. Calculate total revenue per product: ``SQL select product, sum (Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2], Group by product```. The total revenue for each product is as follows:
+4. Calculate total revenue per product: ``SQL select product, sum (Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2]
+Group by product```. The total revenue for each product is as follows:
 
 - Shoe = 3,087,500
 - Jacket =	1,050,000
@@ -169,7 +175,9 @@ In addition to the total sales for each product category, further analysis was m
 - Gloves =	1,500,000
 
 
-5. Calculate monthly sales totals for the current year:```SQL select orderdate, sum (Total_sales) as Totalsales from [dbo].[Sales Data-2-1-2], where orderdate >= '2024-01-01', group by orderdate```. The monthly sales total is as follows:
+5. Calculate monthly sales totals for the current year:```SQL select orderdate, sum (Total_sales) as Totalsales from [dbo].[Sales Data-2-1-2]
+where orderdate >= '2024-01-01'
+group by orderdate```. The monthly sales total is as follows:
 
 - 2024-07-31 =	187,500
 - 2024-04-30 =	200,000
@@ -179,3 +187,48 @@ In addition to the total sales for each product category, further analysis was m
 - 2024-01-31	= 1,000,000
 - 2024-05-31 =	225,000
 - 2024-08-31	= 875,000 
+
+6. Find the top 5 customers by total purchase amount: ```SQL select CustomerID, sum (Total_sales) as Totalsales from [dbo].[Sales Data-2-1-2]
+group by CustomerID
+order by Totalsales desc```. The top 5 customers are:
+
+- Cus1488	= 29,340
+- Cus1375	= 28,925
+- Cus1023	= 28,205
+- Cus1059	= 28,005
+- Cus1367	= 27,920
+
+
+![sql 3-1](https://github.com/user-attachments/assets/67fcd030-2b16-423b-ae4f-700fa1f11330)
+
+
+7.  Calculate the percentage of total sales contributed by each region: ```SQL SELECT Region, SUM(Total_sales) AS RegionalSales,
+(SUM(Total_sales) / CAST((SELECT SUM (Total_sales) FROM [dbo].[Sales Data-2-1-2])
+AS DECIMAL(10, 2)) * 100) AS SalesPercentage
+FROM [dbo].[Sales Data-2-1-2]
+GROUP BY Region```. The total perentage is:
+
+Region/ Regional Sales/ Sales Percentage 
+- North/	1950000/	18.41794569000
+- East/ 2450000/	23.14049586700
+- South/	4675000/ 44.15584415500
+- West/	1512500/	14.28571428500
+
+
+![sql 4](https://github.com/user-attachments/assets/a5f72d71-fb82-479d-8730-0a113243f45d)
+
+
+8. Identify products with no sales in the last quarter: ```SQL SELECT DISTINCT Product FROM [dbo].[Sales Data-2-1-2]
+WHERE product Not In (select product from [dbo].[Sales Data-2-1-2]
+Where OrderDate >= dateadd (quarter, -1, getdate ()) )```. Products with no sales in the last quarter:
+
+- Gloves
+- Jacket
+- Shirt
+- Shoes
+- Socks
+
+
+![sql 5](https://github.com/user-attachments/assets/aff5f3bc-9b2f-444a-9288-7f89beee12f7)
+
+
