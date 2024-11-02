@@ -58,3 +58,8 @@ The total sales per month for both 2023 and 2024 breakdown is as follows:
 The month with the highest sales is Feburary with a total of 2,750,000 and the month with the lowest sales is April with a total sales of 237,500.
 
 ![Project Excel 1](https://github.com/user-attachments/assets/c2f6bd65-a92c-4940-a596-3f6e73c36936)
+
+Pie charts are used to show this data set for quicker analysis
+
+![Project Excel 2](https://github.com/user-attachments/assets/cc663d87-3b55-4510-aa00-d94860ca695b)
+
