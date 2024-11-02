@@ -96,3 +96,15 @@ Futher analysis breakdown:
 
 
 ![sales data 2](https://github.com/user-attachments/assets/9a210e55-fc53-46bb-ad10-63fa70d46ded)
+
+
+After all these anaysis on excel spreadsheet, we saved our file using csv(comma delimited format) to our documented and proceeded to our Structured Query Language (SQL) to write queries to: 
+
+- retrieve the total sales for each product category.
+- find the number of sales transactions in each region.
+- find the highest-selling product by total sales value.
+- calculate total revenue per product.
+- calculate monthly sales totals for the current year.
+- find the top 5 customers by total purchase amount.
+- calculate the percentage of total sales contributed by each region.
+- identify products with no sales in the last quarter.
