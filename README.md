@@ -137,4 +137,21 @@ In addition to the total sales for each product category, further analysis was m
 ![sql 1](https://github.com/user-attachments/assets/b7c374a3-0d47-4c0b-bf8f-be6c09e222b2)
 
 
-2. Find the number of sales transactions in each region:
+2. Find the number of sales transactions in each region: ```SQL select Region, count (CustomerID) as sales_by_region from [dbo].[Sales Data-2-1-2], Group by Region```. The total number of sales transaction are as follows:
+
+ - North =	12,500
+ - East	= 12,500
+ - South = 12,500
+ - West =	12,500
+
+3. Find the highest-selling product by total sales value: ```SQL select product, sum (Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2], Group by product, order by product_total_sales desc``` . The highest selling product in descending order is as follows:
+
+- Shoes =	3,087,500
+- Shirt =	2,450,000
+- Hat = 1,587,500
+- Gloves = 1,500,000
+- Jacket = 1,050,000
+- Socks =	912,500
+
+
+![sql 2](https://github.com/user-attachments/assets/5c51594b-6d73-4f10-8346-e5989bd39ed8)
