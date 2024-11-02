@@ -98,6 +98,11 @@ Futher analysis breakdown:
 ![sales data 2](https://github.com/user-attachments/assets/9a210e55-fc53-46bb-ad10-63fa70d46ded)
 
 
+
+
+
+### SQL ANALYSIS
+
 After all these anaysis on excel spreadsheet, we saved our file using csv(comma delimited format) to our documented and proceeded to our Structured Query Language (SQL) to write queries to: 
 
 - retrieve the total sales for each product category.
