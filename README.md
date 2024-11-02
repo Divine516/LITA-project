@@ -108,3 +108,33 @@ After all these anaysis on excel spreadsheet, we saved our file using csv(comma 
 - find the top 5 customers by total purchase amount.
 - calculate the percentage of total sales contributed by each region.
 - identify products with no sales in the last quarter.
+
+
+The first step is the creation of the database "Capstone_Project" on our SQL maagement studio. 
+Import the excel table to be used for the data squery to the SQL studio. 
+
+Thereafter ``` SQL SELECT * FROM SALES DATA 2-1-2``` and begin to write queries to analyze your data set. The first query to be written is to 
+
+1. Retrieve the total sales for each product category : ```SQL select product, sum(Total_Sales) as product_total_sales from [dbo].[Sales Data-2-1-2], Group by PRODUCT```. The total sales retrieved is as follows :
+
+- Shoes =	3,087,500
+- Jacket =	1,050,000
+- Hat	= 1,587,500
+- Socks =	912,500
+- Shirt	= 245,0000
+- Gloves =	1,500,000
+
+In addition to the total sales for each product category, further analysis was made on total quantity that was sold for each product: ```SQL select product, sum (Quantity) as Quantity_Revenue from [dbo].[Sales Data-2-1-2], Group by product```. The total quantity per product is as follows:
+
+- Shoes = 72,500
+- Jacket = 27,500
+- Hat = 80,000
+- Socks = 40,000
+- Shirt = 62,500
+- Gloves = 62,500
+
+
+![sql 1](https://github.com/user-attachments/assets/b7c374a3-0d47-4c0b-bf8f-be6c09e222b2)
+
+
+2. Find the number of sales transactions in each region:
