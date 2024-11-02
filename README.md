@@ -59,7 +59,40 @@ The month with the highest sales is Feburary with a total of 2,750,000 and the m
 
 ![Project Excel 1](https://github.com/user-attachments/assets/c2f6bd65-a92c-4940-a596-3f6e73c36936)
 
+
+
 Pie charts are used to show this data set for quicker analysis
 
 ![Project Excel 2](https://github.com/user-attachments/assets/cc663d87-3b55-4510-aa00-d94860ca695b)
 
+
+![Project Excel 2-1](https://github.com/user-attachments/assets/4abf8a8b-3a5f-4e9c-a9d1-2c7c630ea195)
+
+
+
+Formulas were also used to find the average sales per prodct and total sales per region. The averageif function was used to find the average sales per product and the sumif function for the total sales per region.  Also went ahead to look for more information that will help with our anlysis such as te hghest number of quantity sold, the lowest number of quantity sold, the fourth highest total sales, the fiftiest lowest total sales made and the overall number of sales made within 2023 ad 2024.
+
+
+
+The average sales per product is as follows:
+
+- Gloves = 200
+- Hat = 158.75
+- Jacket = 140
+- Shirt = 326.6667
+- Shoes = 308.75
+- Socks = 121.6667
+
+The total sales per region breakdown as already been stated above.
+
+Futher analysis breakdown:
+
+- The highest number of quanity sold = 12
+- The lowest number of quantity sold = 2
+- The fourth highest total sales = 600
+- The fiftiest lowest total sales = 15
+- Total number of sales made = 50,000
+
+
+
+![sales data 2](https://github.com/user-attachments/assets/9a210e55-fc53-46bb-ad10-63fa70d46ded)
