@@ -250,6 +250,20 @@ The final step in analyzing the sales data set is visualizing the data. There ar
 
 
 The first thing to be done is to go to transform data then check the column quality, distribution and profile to ensure that your data is clean enough for you to use.
-Create a conditional column for Canceled with has response as either true or false. Wher True = 1 anf False = 2. Close and apply and proceed to your report view for visualization
+Create a conditional column for Canceled with has response as either true or false. Wher True = 1 anf False = 2. Close and apply and proceed to your report view for visualization.
+The visualization of the data set is as follows:
+
+- Total Number of Sales
+- Sum of Quantity by Product
+- Sum of Total sales by Product and Sales
+- Sum of Total sales by Product
+- Sum of Total sales by Region
+- Sum of Quantity by Region
+
+
+
+![power bi project 1-1](https://github.com/user-attachments/assets/5130243a-3b2d-497e-b825-eea7e8978795)
+
+
 
 
