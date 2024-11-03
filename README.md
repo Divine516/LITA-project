@@ -237,3 +237,19 @@ Where OrderDate >= dateadd (quarter, -1, getdate ()) )```. Products with no sale
 ![sql 5](https://github.com/user-attachments/assets/aff5f3bc-9b2f-444a-9288-7f89beee12f7)
 
 
+
+
+## POWER BI VISUALIZATION
+
+
+The final step in analyzing the sales data set is visualizing the data. There are different visualizing tools such as tables, matrix, bar charts, lines and so on. The essence of visualizing this data set is to show in an organized and simpler manner the data set given for analyses. We will be creating a dashboard that visualizes the insights we found in Excel and SQL. The dashboard includes:
+
+- A sales overview
+- Top-performing products
+- Regional breakdowns
+
+
+The first thing to be done is to go to transform data then check the column quality, distribution and profile to ensure that your data is clean enough for you to use.
+Create a conditional column for Canceled with has response as either true or false. Wher True = 1 anf False = 2. Close and apply and proceed to your report view for visualization
+
+
